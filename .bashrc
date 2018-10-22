@@ -12,3 +12,7 @@ PS1='[\u@\h \W]\$ '
 cat /home/leuf/.cache/wal/sequences &
 
 neofetch
+
+alias c='clear'
+alias la='ls -la'
+alias v='vim'
