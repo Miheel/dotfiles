@@ -1,0 +1,6 @@
+[user]
+	email = mikaelleuf@gmail.com
+	name = Miheel
+[alias]
+	ci = commit
+	tree = ls-tree -r master --name-only
