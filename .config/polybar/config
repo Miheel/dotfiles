@@ -26,7 +26,7 @@ background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
-secondary = #e60053
+	secondary = #e60053
 alert = #bd2c40
 
 [bar/bottom]
@@ -46,11 +46,11 @@ border-color = #000000
 padding = 0
 module-margin = 2
 
-font-0 = scientifica;fixed;pixelsize=10;1
-font-1 = uniform;fontformat=truetype;size=8;anialias=false;0
-font-2 = siji;pixelsize=10;1
+font-0 = scientifica:fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
 
-mobules-center = title
+modules-center = title
 
 [module/title]
 type = internal/xwindow

@@ -4,8 +4,8 @@
 killall -q polybar
 
 #whit until the process have been shut down
-while grep -u $UID -x polybar >/dev/null; do sleep 1; done
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-polybar top &
-
+#polybar top &
+polybar exeple -r &
 polybar bottom &
