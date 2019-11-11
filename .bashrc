@@ -14,5 +14,8 @@ cat /home/leuf/.cache/wal/sequences &
 neofetch
 
 alias c='clear'
-alias la='ls -la'
-alias v='vim'
+alias li='ls -lh'
+alias la='ls -lha'
+alias v='nvim'
+alias pls='sudo'
+alias back='cd ../'

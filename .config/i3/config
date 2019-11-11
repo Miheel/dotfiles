@@ -188,20 +188,6 @@ client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
-# bar
-bar {
-	position top
-  	status_command i3blocks -c /home/leuf/.config/i3/i3blocks.conf
-	colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
-
 #Pulse Audio control
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
@@ -220,14 +206,14 @@ bindsym $mod+z exec --no-startup-id $terminal -e ranger
 bindsym $mod+n exec --no-startup-id $terminal -e ncmpcpp
 bindsym $mod+p exec --no-startup-id scrot
 
-
 #startup
 exec --no-startup-id sh /home/leuf/.fehbg
 exec --no-startup-id wal -a 70 -R -n
 exec --no-startup-id compton --xrender-sync-fence -b
-exec --no-startup-id firefox
+#exec --no-startup-id firefox
 exec --no-startup-id mpd
 exec --no-startup-ip unclutter -idle 1 &
+exec_always --no-startup-id ,config/polybar/launsh.sh
 
 for_window [class="^.*"] border pixel 0
 
