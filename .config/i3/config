@@ -207,7 +207,7 @@ exec --no-startup-id compton --xrender-sync-fence -b
 #exec --no-startup-id firefox
 exec --no-startup-id mpd
 #exec --no-startup-id unclutter -idle 1 &
-exec --no-startup-id .config/polybar/launsh.sh
+exec --no-startup-id .config/polybar/launch.sh &amp
 
 for_window [class="^.*"] border pixel 0
 
