@@ -17,11 +17,11 @@ URxvt.scrollTtyKeypress: true
 URxvt.scrollWithBuffer: true
 
 !font
-URxvt.font: xft:monospace:size=10
+URxvt.font: xft:inconsolata:size=11, xft:mplus Nerd Font:size=10:style=regular
 
 ! needed to fix font spacing
-URxvt.letterSpace: -1
-URxvt.lineSpace: 2
+URxvt.letterSpace: 1
+#URxvt.lineSpace: 2
 URxvt.tripleclickwords: true
 URxvt.insecure: true
 
