@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Enable bitmap fonts
+sudo rm /etc/fonts/conf.d/10*
+
+#Download font
+git clone https://github.com/NerdyPepper/scientifica.git ~/Downloads/scientifica/
+
+cp ~/Downloads/scientifica/regular/scientifica-11.bdf ~/.local/share/fonts/
+cp ~/Downloads/scientifica/bold/scientificaBold-11.bdf ~/.local/share/fonts/
+
+aurman -S ttf-ms-fonts --noconfirm --needed
+
+#Rebuild font cache
+fc-cache
+
+#Install fonts if needed
+sudo pacman -S ttf-dejavu --noconfirm --needed
+aurman -S nerd-fonts-complete --noconfirm --needed
+aurman -S ttf-font-awesome --noconfirm --needed
+
