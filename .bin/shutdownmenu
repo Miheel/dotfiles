@@ -4,9 +4,9 @@ choice=$(echo -e "shutdown\nreboot\nlogout" | rofi -dmenu -p "system")
 
 case $choice in
 	shutdown )
-		sudo shutdown -P now ;;
+		shutdown -P now ;;
 	reboot )
 		reboot ;;
 	logout )
-		i3-msg exit;;
+		 i3-msg exit;;
 esac
