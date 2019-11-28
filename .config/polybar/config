@@ -12,7 +12,6 @@
 ;==========================================================
 
 
-
 [colors]
 background = ${xrdb:color0:#222}
 background-alt = ${xrdb:color7:#000}
@@ -120,7 +119,7 @@ label-empty-padding = ${self.padding}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <toggle> <icon-next> <bar-progress>
+format-online = <label-song> <icon-prev> <toggle> <icon-next> <bar-progress>
 
 label-song = %artist% / %title%
 
@@ -133,7 +132,7 @@ icon-next = 
 label-song-maxlen = 60
 label-song-ellipsis = true
 
-bar-progress-width = 15
+bar-progress-width = 25
 bar-progress-indicator = 
 bar-progress-fill = %{T3}█%{T-}
 bar-progress-empty = %{T3}█%{T-}

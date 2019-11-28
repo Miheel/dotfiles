@@ -18,4 +18,5 @@ fc-cache
 sudo pacman -S ttf-dejavu --noconfirm --needed
 aurman -S nerd-fonts-complete --noconfirm --needed
 aurman -S ttf-font-awesome --noconfirm --needed
+aurman -S siji-git --noconfirm --needed
 
