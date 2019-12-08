@@ -2,5 +2,36 @@
 	email = mikaelleuf@gmail.com
 	name = Miheel
 [alias]
-	ci = commit
+	#Add
+	##########
+	a = add
+	au = add -u
+
+	#Commit
+	##########
+	c = commit
+	ca = commit -a
+	cm = commit -m
+
+	#Push
+	##########
+	p = push
+	puom = push -u origin master
+
+	#Pull
+	##########
+	pl = pull
+
+	#Reset
+	##########
+	r = reset
+	rh = reset --hard
+	rhom = reset --hard origin/master
+	
+	#Status
+	##########
+	s = status
+
+	#ls
+	##########
 	tree = ls-tree -r master --name-only

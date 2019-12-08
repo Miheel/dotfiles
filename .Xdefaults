@@ -1,14 +1,3 @@
-! --[ URxvt ]-----------------------------------------------
-! comment out to leave it to colorscheme
-! colors
-URxvt.cursorColor: #83C048
-URxvt*background: [80]#000000
-URxvt.foreground: #cccccc
-URxvt.highlightColor: #444444
-URxvt.underlineColor: #999999
-URxvt.colorUL: #4682B4
-URxvt.depth: 32
-
 ! scrollback
 URxvt.scrollBar: false
 URxvt.saveLines: 100000
@@ -21,7 +10,6 @@ URxvt.font: xft:inconsolata:size=11, xft:mplus Nerd Font:size=10:style=regular
 
 ! needed to fix font spacing
 URxvt.letterSpace: 1
-#URxvt.lineSpace: 2
 URxvt.tripleclickwords: true
 URxvt.insecure: true
 
