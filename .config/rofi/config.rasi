@@ -1,0 +1,11 @@
+configuration {
+ display-run: "run";
+ drun-display-format: "{icon} {name}";
+ font: "scientifica 8";
+ location: 2;
+ modi: "window,run,drun";
+ show-icons: true;
+ icon-theme: "Papirus";
+}
+
+@theme "~/.cache/wal/colors-rofi-light.rasi"

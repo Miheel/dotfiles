@@ -11,7 +11,8 @@ PS1='[\u@\h \W]\$ '
 #pywal
 cat /home/leuf/.cache/wal/sequences &
 
-neofetch
+#neofetch
+fastfetch
 
 alias c='clear'
 alias li='ls -lh'

@@ -6,12 +6,24 @@ URxvt.scrollTtyKeypress: true
 URxvt.scrollWithBuffer: true
 
 !font
-URxvt.font: xft:inconsolata:size=11, xft:mplus Nerd Font:size=10:style=regular
+!URxvt.font: xft:Inconsolata Nerd Font:size=11, xft:mplus Nerd Font:size=10:style=regular
+URxvt.font: xft:Inconsolata Nerd Font:size=11, xft:M+1 Nerd Font:size=10:style=regular
 
-! needed to fix font spacing
-URxvt.letterSpace: 1
-URxvt.tripleclickwords: true
-URxvt.insecure: true
+!needed to fix font spacing
+URxvt*letterSpace: -1
+URxvt.intensityStyles: false
+URxvt.internalBorder: 8
 
-#extensions
+URxvt.iso14755: false
+
+!fake transparancy
+!Rxvt*transparent: true
+!URxvt*shading: 30
+
+!real transparancy
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
+
+
+!extensions
 URxvt.perl-ext-common: selection-to-clipboard

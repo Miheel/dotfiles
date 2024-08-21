@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+echo -e "\u2713"
+echo -e "\u263A"
+echo -e "\u2022"
