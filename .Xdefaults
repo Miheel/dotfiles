@@ -27,3 +27,6 @@ URxvt*background: rgba:0000/0000/0200/c800
 
 !extensions
 URxvt.perl-ext-common: selection-to-clipboard
+
+!pywal
+#include "/home/leuf/.cache/wal/colors.Xresources"
