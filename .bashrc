@@ -9,7 +9,9 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 #pywal
-#cat /home/leuf/.cache/wal/sequences &
+#(cat /home/leuf/.cache/wal/sequences &)
+source ~/.cache/hellwal/variables.sh
+sh ~/.cache/hellwal/terminal.sh
 
 #neofetch
 fastfetch
