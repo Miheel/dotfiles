@@ -212,7 +212,7 @@ bindsym $mod+p exec --no-startup-id scrot
 bindsym $mod+x exec ~/.bin/shutdownmenu
 
 #startup
-exec --no-startup-id .config/polybar/launch.sh &amp
+exec --no-startup-id .config/polybar/launch.sh &
 #exec --no-startup-id compton --xrender-sync-fence -b
 exec --no-startup-id picom
 exec --no-startup-id sh /home/leuf/.fehbg
