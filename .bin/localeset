@@ -1,0 +1,34 @@
+#!/bin/bash
+
+LOCALE_GEN="/etc/locale.gen"
+
+mapfile -t -s 17 LOCALES < "$LOCALE_GEN"
+LOCALES+=("quit")
+
+
+locale_lookup() {
+    MY_LOCALES=()
+    echo "Chose any nr of locales the first one chosen will be the system locale" >&2
+    select locale in "${LOCALES[@]}"; do
+        if [ "$locale" == "quit" ]; then
+            break
+        fi
+        MY_LOCALES+=("${locale#\#}")
+    done
+    
+    printf "%s\n" "${MY_LOCALES[@]}" 
+}
+
+
+
+locale_set() {
+
+    #KEYMAP
+    echo "KEYMAP: $1"
+    shift
+    #syslocale
+    arr=("$@")
+    echo "LANG: ${arr[0]%% *}"
+
+    echo "$@"
+}
