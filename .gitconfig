@@ -37,3 +37,5 @@
 	tree = ls-tree -r master --name-only
 [credential]
 	helper = store
+[core]
+	pager = cat
