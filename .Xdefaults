@@ -7,7 +7,9 @@ URxvt.scrollWithBuffer: true
 
 !font
 !URxvt.font: xft:Inconsolata Nerd Font:size=11, xft:mplus Nerd Font:size=10:style=regular
-URxvt.font: xft:Inconsolata Nerd Font:size=11, xft:M+1 Nerd Font:size=10:style=regular
+URxvt.font: xft:DejaVu Sans Mono:style=Book:pixelsize=17,\
+            xft:Inconsolata Nerd Font:size=11:style=regular,\
+            xft:M+1 Nerd Font:size=10:style=regular
 
 !needed to fix font spacing
 URxvt*letterSpace: -1

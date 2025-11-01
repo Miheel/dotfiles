@@ -1,0 +1,64 @@
+#!/bin/bash
+
+add_header() {
+
+    read -p "Add header? [Y/n]: " choice
+    if [[ "$choice" == [Yy] || -z "$choice" ]]; then
+        echo "$1"
+    fi
+}
+kernel_choice() {
+    CHOICE=("stable" "zen" "lts" "hardened" "quit")
+    KERNELS=("linux" "linux-zen" "linux-lts" "linux-hardened")
+    HEADERS=("linux-headers" "linux-zen-headers" "linux-lts-headers" "linux-hardened-headers")
+    PACKAGES=()
+    header=""
+
+    echo "Choose a kernel:" >&2
+    select kernel in "${CHOICE[@]}"; do
+        case $kernel in
+            stable)
+                PACKAGES+=("${KERNELS[0]}")
+                header=$(add_header "${HEADERS[0]}")
+                if [[ -n "$header" ]]; then
+                    PACKAGES+=("$header")
+                fi
+                break
+            ;;
+            zen)
+                PACKAGES+=("${KERNELS[1]}")
+                header=$(add_header "${HEADERS[1]}")
+                if [[ -n "$header" ]]; then
+                    PACKAGES+=("$header")
+                fi
+                break
+            ;;
+            lts)
+                PACKAGES+=("${KERNELS[2]}")
+                header=$(add_header "${HEADERS[2]}")
+                if [[ -n "$header" ]]; then
+                    PACKAGES+=("$header")
+                fi
+                break
+            ;;
+            hardened)
+                PACKAGES+=("${KERNELS[3]}")
+                header=$(add_header "${HEADERS[3]}")
+                if [[ -n "$header" ]]; then
+                    PACKAGES+=("$header")
+                fi
+                break
+            ;;
+            quit)
+                echo "Aborting..." >&2
+                return 1
+            ;;
+        esac
+    done
+
+    printf "%s\n" "${PACKAGES[@]}"  
+}
+
+kernel_set(){
+    echo "pacstrap -K /mnt base" "$@" "linux-firmware" 
+}

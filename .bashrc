@@ -23,3 +23,5 @@ alias v='nvim'
 alias pls='sudo'
 alias ba='cd ../'
 alias home='cd $HOME'
+
+export PATH"$HOME/.bin:$PATH"

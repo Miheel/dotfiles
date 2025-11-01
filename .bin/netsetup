@@ -42,5 +42,3 @@ net_setup(){
         esac
     done
 }
-
-net_setup

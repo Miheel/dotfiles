@@ -1,0 +1,79 @@
+#!/bin/bash
+
+. keymapset
+. netsetup
+#. diskset
+#. mirrorset
+. kernelset
+. systimeset
+. localeset
+
+
+keymap_str="us"
+timezone_path="/usr/share/zoneinfo/US/Eastern"
+kernel_str=("linux" "linux-headers")
+locales_str=("en_US.UTF-8 UTF-8")
+
+configs(){
+    echo "Keymap:    \"$keymap_str\""
+    echo "Timezone:  \"$timezone_path\""
+    echo "Kernel:    \"${kernel_str[@]}\""
+    echo "locales:    \"${locales_str[@]}\""
+}
+
+confirm(){
+    #keymap_set "$keymap_str"
+    ##internet
+    #timedatectl
+    ##disk
+    ##mirror
+    #kernel_set "${kernel_str[@]}"
+    #genfstab -U /mnt >> /mnt/etc/fstab
+    #arch-chroot /mnt
+    #timezone_set "$timezone_path"
+    locale_set "$keymap_str" "${locales_str[@]}"
+
+}
+
+CHOICES=("Keymap" "Internet" "Disk" "Mirrors" "Kernel" "Time" "Locale" "Configs" "Confirm" "Quit")
+
+select opt in "${CHOICES[@]}"; do
+    case $opt in
+        "Keymap")
+            keymap_str=$(keymap_lookup)
+        ;;
+        "Internet")
+            net_setup
+        ;;
+        "Disk")
+            echo "disk part"
+        ;;
+        "Mirrors")
+            echo "mirror"
+        ;;
+        "Kernel")
+            mapfile -t kernel_str < <(kernel_choice)
+        ;;
+        "Time")
+            timezone_path=$(timezone_lookup)
+        ;;
+        "Locale")
+            mapfile -t locales_str < <(locale_lookup)
+        ;;
+        "Configs")
+            configs
+        ;;
+        "Confirm")
+            confirm
+            break
+        ;;
+        "Quit")
+            echo "Aborting..."
+            break
+        ;;
+        *)
+            echo "Invalid selection."
+        ;;
+    esac
+done
+        
